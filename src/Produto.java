@@ -2,9 +2,9 @@ import java.math.BigDecimal;
 
 public class Produto {
 
-    private final String nome;
-    private final BigDecimal preco;
-    private final int quantidade;
+    public final String nome;
+    public final BigDecimal preco;
+    public final int quantidade;
 
     public Produto (String nome, BigDecimal preco, int quantidade) {
         this.nome = nome;
