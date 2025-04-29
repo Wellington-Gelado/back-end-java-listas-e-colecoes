@@ -1,16 +1,19 @@
 import java.math.BigDecimal;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.Date;
 
 public class MainProdutoPerecivel {
 
     public static void main(String[] args) {
         ArrayList<ProdutoPerecivel> listaDeProdutos = new ArrayList<>();
 
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy/MM/dd");
+
         ProdutoPerecivel produto1 =
-                new ProdutoPerecivel("Arroz Integral" , new BigDecimal(20.45), 3, new Date(2025/04/20));
-        ProdutoPerecivel produto2 = new ProdutoPerecivel("Whey Protein" , new BigDecimal(50), 8, new Date(2025/04/20));
-        ProdutoPerecivel produto3 = new ProdutoPerecivel("Aveia" , new BigDecimal(15), 1, new Date(2025/04/20));
+                new ProdutoPerecivel("Arroz Integral", new BigDecimal(20.45), 3, LocalDate.parse("2025/04/20", formatter));
+        ProdutoPerecivel produto2 = new ProdutoPerecivel("Whey Protein", new BigDecimal(50), 8, LocalDate.parse("2025/04/20", formatter));
+        ProdutoPerecivel produto3 = new ProdutoPerecivel("Aveia", new BigDecimal(15), 1, LocalDate.parse("2025/04/20", formatter));
 
         listaDeProdutos.add(produto1);
         listaDeProdutos.add(produto2);
@@ -18,7 +21,7 @@ public class MainProdutoPerecivel {
 
         System.out.println("Tamanho da lista de produtos = " + listaDeProdutos.size());
 
-        System.out.println("O primeiro produto da lista é :\n " + listaDeProdutos.getFirst());
+        System.out.println("O primeiro produto da lista é :\n " + listaDeProdutos.get(0));
 
         System.out.println("Imprimindo lista de objetos...");
         System.out.println(listaDeProdutos);
@@ -27,7 +30,5 @@ public class MainProdutoPerecivel {
         for (ProdutoPerecivel produto : listaDeProdutos){
             System.out.println(produto);
         }
-
-
     }
 }

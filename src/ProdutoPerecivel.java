@@ -1,12 +1,12 @@
 import java.math.BigDecimal;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class ProdutoPerecivel extends Produto {
 
-    private Date dataValidade;
+    private LocalDate dataValidade;
 
-    public ProdutoPerecivel(String nome, BigDecimal preco, int quantidade, Date dataValidade) {
+    public ProdutoPerecivel(String nome, BigDecimal preco, int quantidade, LocalDate dataValidade) {
         super(nome, preco, quantidade);
         this.dataValidade = dataValidade;
     }
@@ -14,8 +14,8 @@ public class ProdutoPerecivel extends Produto {
     @Override
     public String toString() {
 
-        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-        String dataFormatada = sdf.format(dataValidade);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        String dataFormatada = dataValidade.format(formatter);
 
         return """
                   {
