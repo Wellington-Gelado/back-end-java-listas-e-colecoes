@@ -2,9 +2,19 @@ import java.math.BigDecimal;
 
 public class Produto {
 
-    public final String nome;
-    public final BigDecimal preco;
-    public final int quantidade;
+    private final String nome;
+    private final BigDecimal preco;
+    private final int quantidade;
+
+    public String getNome() {
+        return nome;
+    }
+    public BigDecimal getPreco() {
+        return preco;
+    }
+    public int getQuantidade() {
+        return quantidade;
+    }
 
     public Produto (String nome, BigDecimal preco, int quantidade) {
         this.nome = nome;

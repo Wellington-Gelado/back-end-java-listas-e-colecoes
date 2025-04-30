@@ -24,6 +24,6 @@ public class ProdutoPerecivel extends Produto {
                     quantidade = %d,
                     dataValidade = %s
                   }
-                """.formatted(super.nome, super.preco, super.quantidade, dataFormatada);
+                """.formatted(super.getNome(), super.getPreco(), super.getQuantidade(), dataFormatada);
     }
 }

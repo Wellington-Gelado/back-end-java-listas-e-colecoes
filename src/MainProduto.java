@@ -1,4 +1,5 @@
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.ArrayList;
 
 public class MainProduto {
@@ -6,9 +7,12 @@ public class MainProduto {
     public static void main(String[] args) {
         ArrayList<Produto> listaDeProdutos = new ArrayList<>();
 
-        Produto produto1 = new Produto("Arroz Integral" , new BigDecimal(20.45), 3);
-        Produto produto2 = new Produto("Whey Protein" , new BigDecimal(50), 8);
-        Produto produto3 = new Produto("Aveia" , new BigDecimal(15), 1);
+        BigDecimal valorTotal = BigDecimal.ZERO;
+        BigDecimal media = BigDecimal.ZERO;
+
+        Produto produto1 = new Produto("Arroz Integral" , BigDecimal.valueOf(20.45), 3);
+        Produto produto2 = new Produto("Whey Protein" , BigDecimal.valueOf(50), 8);
+        Produto produto3 = new Produto("Aveia" , BigDecimal.valueOf(15), 1);
 
         listaDeProdutos.add(produto1);
         listaDeProdutos.add(produto2);
@@ -23,7 +27,18 @@ public class MainProduto {
 
         System.out.println("Imprimindo objetos da lista...");
         for (Produto produto : listaDeProdutos){
+            valorTotal = valorTotal.add(produto.getPreco());
             System.out.println(produto);
         }
+
+        if (listaDeProdutos.isEmpty()){
+            System.out.println("Lista Vazia, não existe média.");
+        }else{
+            media = valorTotal.divide(new BigDecimal(listaDeProdutos.size()), 2, RoundingMode.HALF_UP);
+            System.out.println("Média da lista = " +media+ "!");
+        }
+
+
+
     }
 }
