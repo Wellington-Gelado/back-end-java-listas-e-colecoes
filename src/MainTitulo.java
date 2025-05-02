@@ -1,11 +1,9 @@
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
 public class MainTitulo {
     public static void main(String[] args) {
-        List<Titulo> listaTitulos = new ArrayList<>();
+//        List<Titulo> listaTitulos = new ArrayList<>();
+        List<Titulo> listaTitulos = new LinkedList<>();
 
         Titulo t1 = new Titulo("Senhor dos Anéis");
         Titulo t2 = new Titulo("As Crônicas de Narnia");
