@@ -1,3 +1,4 @@
+package aula3;
 
 public class Animal {
     private String nome;
@@ -33,7 +34,7 @@ public class Animal {
 
     @Override
     public String toString() {
-        return "Animal{" +
+        return "aula3.Animal{" +
                 "nome='" + nome + '\'' +
                 ", idade=" + idade +
                 ", som='" + som + '\'' +

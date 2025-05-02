@@ -1,4 +1,6 @@
-public class Cachorro extends Animal{
+package aula3;
+
+public class Cachorro extends Animal {
     private String raca;
 
     public Cachorro (String nome, int idade, String som, String raca){

@@ -1,3 +1,5 @@
+package aula2;
+
 import java.math.BigDecimal;
 
 public class Produto {

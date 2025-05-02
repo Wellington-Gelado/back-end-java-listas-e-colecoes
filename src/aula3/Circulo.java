@@ -1,7 +1,9 @@
+package aula3;
+
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
-public class Circulo implements FormaGeometrica{
+public class Circulo implements FormaGeometrica {
 
     private double raio;
 

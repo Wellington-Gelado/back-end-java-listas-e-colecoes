@@ -1,3 +1,5 @@
+package aula4;
+
 public class Titulo implements Comparable<Titulo>{
     private String nome;
 

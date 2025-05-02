@@ -1,3 +1,5 @@
+package aula3;
+
 public class MainCachorroAnimal {
     public static void main(String[] args) {
 
@@ -7,7 +9,7 @@ public class MainCachorroAnimal {
 
         cachorro.fazerSom();
 
-        //Fazendo Cast de Cachorro para Animal
+        //Fazendo Cast de Cachorro para aula3.Animal
         Animal cachoroCast = (Animal) cachorro;
 
         // Verificação usando instanceof

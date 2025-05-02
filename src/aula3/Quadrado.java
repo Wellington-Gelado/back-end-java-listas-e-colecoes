@@ -1,6 +1,6 @@
-import java.math.BigDecimal;
+package aula3;
 
-public class Quadrado implements FormaGeometrica{
+public class Quadrado implements FormaGeometrica {
 
     private double lado;
 
@@ -14,6 +14,6 @@ public class Quadrado implements FormaGeometrica{
 
     @Override
     public String toString() {
-        return "Quadrado com lado = " + lado;
+        return "aula3.Quadrado com lado = " + lado;
     }
 }

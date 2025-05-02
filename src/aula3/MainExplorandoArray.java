@@ -1,3 +1,5 @@
+package aula3;
+
 import java.util.ArrayList;
 
 public class MainExplorandoArray {
