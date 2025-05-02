@@ -35,7 +35,7 @@ public class MainContaBancaria {
 
         System.out.println("""
                 A conta %d tem o maior saldo = %.2f!!
-                """.formatted(contaMaiorSaldo.getConta(), contaMaiorSaldo.getSaldo()));
+                """.formatted(contaMaiorSaldoStream.getConta(), contaMaiorSaldoStream.getSaldo()));
 
 
     }
